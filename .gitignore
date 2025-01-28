@@ -1,0 +1,8 @@
+*
+!*/
+
+!.gitignore
+!README.md
+!**/*.tex
+!**/*.lua
+!**/bin/*.pdf
