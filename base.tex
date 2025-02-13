@@ -17,9 +17,9 @@
 	\babelprovide{rl}
 \fi
 %\babelfont{rm}{Libertinus Serif}
-\babelfont{rm}[Renderer=Harfbuzz]{David CLM}
-\babelfont{sf}{FreeSerif}
-\babelfont{tt}{FreeMono}
+\babelfont{rm}[Renderer=Harfbuzz]{Libertinus Serif}
+\babelfont{sf}{Libertinus Sans}
+\babelfont{tt}{Libertinus Mono}
 
 % style
 \AddToHook{cmd/section/before}{\clearpage}	% Add line break before section
@@ -27,6 +27,35 @@
 \setcounter{secnumdepth}{0}		% Remove default number tags from sections, this won't do well with theorems
 \AtBeginDocument{\setlength{\belowdisplayskip}{3pt}}
 \AtBeginDocument{\setlength{\abovedisplayskip}{3pt}}
+\definecolor{peach}{RGB}{246, 196, 187}
+\definecolor{teal}{RGB}{205, 234, 229}
+\definecolor{lime}{RGB}{217, 233, 210}
+\definecolor{yello}{RGB}{252, 241, 188}
+
+\titleformat{\section}
+	{\Large\bfseries\rmfamily\color{black}}
+	{1}
+	{0pt}
+	{\underLine[color=peach,top=0.4ex,height=1ex]{#1}}
+
+\titleformat{\subsection}
+	{\large\bfseries\rmfamily\color{black}}
+	{1}
+	{0pt}
+	{\underLine[color=teal,top=0.4ex,height=1ex]{#1}}
+
+\titleformat{\subsubsection}
+	{\normalsize\bfseries\rmfamily\color{black}}
+	{1}
+	{0pt}
+	{\underLine[color=lime,top=0.4ex,height=1ex]{#1}}
+
+\titleformat{\paragraph}
+	{\normalsize\bfseries\rmfamily\color{black}}
+	{1}
+	{0pt}
+	{\underLine[color=yello,top=0.4ex,height=1ex]{#1}}
+
 
 % operators
 \DeclareMathOperator\Sp{Sp}
@@ -44,6 +73,16 @@
 \DeclareMathOperator\cov{Cov}
 
 % commands
+\newcommand{\maketitleprint}[0]{
+	\begin{center}
+		\begin{tikzpicture}[scale=3]
+			\duck[body=pink,
+			unicorn=magenta!60!violet,
+			longhair=magenta!60!violet,graduate=gray!20!black,
+			tassel=red!70!black]
+	  \end{tikzpicture}
+	\end{center}
+}
 %\renewcommand\qedsymbol{\textbf{מש''ל}}
 %\renewcommand\qedsymbol{\fbox{\emoji{lizard}}}
 \newcommand{\Aa}[0]{\mathcal{A}}

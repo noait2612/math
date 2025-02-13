@@ -1,0 +1,52 @@
+% !TEX root =./bla.tex
+
+\input{../base.tex}
+\title{פתרון שקרים 05 --- שקרים מאוד מתקדמים 3 (80415)}
+\begin{document}
+\maketitle
+\maketitleprint
+
+\question{}
+תהיי \( G \) חבורה סsופית ויהיו \( P_1, P_2, \dots, P_r \) חבורות P־סילו של G, אחת לכל אחד מהמספרים הראשוניים \( p_1, p_2, \dots, p_r \) המחלקים את \( |G| \). \\
+נוכיח ש \( G = \langle P_1, P_2, \dots, P_n \rangle = \langle \bigcup_{\substack{i=1 \\ i \text{ prime}}}^{r} P_i \ \rangle \)  
+
+\begin{proof}
+  נסמן \( P = \langle \bigcup_{\substack{i=1 \\ i \text{ prime}}}^{r} P_i \ \rangle \). \\
+  נבחין שלכל i מתקיים \( P_i \leq P \) (ישירות מהגדרה של תת־חבורה) ולכן לפי משפט לגראנז' מתקיים \( |P_i| \mid |P| \). \\
+  מצד שני, מתקיים באותו אופן \( |P_i| \mid |G| \) מהגדרת חבורות P־סילו ולכן נקבל ש־ \( |G| \) הוא LCM של כל \( |P_i| \). \\
+  ולכן מהגדרה צריך להתקיים ש־ \( |P| \) הוא כפולה של \( |G| \).  \\
+  אבל מהגדרת האיחוד והגדרת \( P \) נקבל שלכל היותר \( |P| \leq |G| \). \\
+  נבחין כמובן שאם מתקיים \( |P| < |G| \) נקבל ישירות סתירה כי אחרת זה לא כפולה ונסיק אם כך ש־ \( |P| = |G| \) ומכיוון ש־ \( P \) מורכבת מהגדרתה רק מאיברים ב־ \( G \) נסיק כי \( P = G \), כנדרש
+\end{proof}
+
+\question{}
+תהיי \( G \) חבורה, \( N \leq Z(G) \) וידוע ש־ \( G/N \) נילפוטטנטית. נראה ש־ \( G\) נילפוטטנטית.
+\begin{proof}
+  ראשית נבחין שמתקיים \( N\trianglelefteq G \) שכן \( N \leq Z(G) \) וגם \( Z(G)\trianglelefteq G\) ועם קצת אלגברה בסיסית נוכל לקבל את הנורמליות.\\
+  מהיות \( G/N \) נילפוטטנטית נקבל כי יש לה סדרת הרכב עולה $$1 = G_0 \leq G_1 \leq \ldots \leq G_n = G/N$$ 
+  ויהי הומומורפיזם הטלה הקאנוני $$\pi : G \to G/N $$
+  נסמן ב־ \( \overline G_i  \) את המקור של \( G_i \) ב־ \pi.
+  ממשפט ההתאמה נקבל ש־ \( \overline G_i = \pi^{-1}(G_i)\)
+  ונקבל את הסדרת הרכב העולה הבאה
+  $$1 = N_0 \leq N \leq \overline{G_1} \leq \ldots \leq \overline{G_n} = G$$ 
+  
+\end{proof}
+
+\question{}
+$$f(x) = \frac{f(x) + f(-x)}{2} + \frac{f(x)-f(-x)}{2}$$
+
+\subquestion{}
+נסמן $Y = X^2$.
+
+\subsubsection{תת־סעיף 1}
+נוכיח שהוא חסר שונות. ממש
+\begin{proof}
+	אחת שתיים שלוש דג מלוח
+	\[
+		f(x) = \int_{-\infty}^{\infty} f_X(s)\ ds
+	\]
+	ולכן הטענה נכונה.
+  לא ד
+\end{proof}
+
+\end{document}
